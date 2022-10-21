@@ -1,11 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 import { AppComponent } from './app.component';
-import { NxWelcomeComponent2 } from './nx-welcome.component2';
+import { NxWelcomeComponent1 } from './nx-welcome-component1.component';
+import { RouterTestingModule } from '@angular/router/testing';
 
 describe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [AppComponent, NxWelcomeComponent2],
+      imports: [RouterTestingModule],
+      declarations: [AppComponent, NxWelcomeComponent1],
     }).compileComponents();
   });
 
@@ -15,16 +17,18 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'host'`, () => {
+  it(`should have as title 'header'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('host');
+    expect(app.title).toEqual('header');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('Welcome host');
+    expect(compiled.querySelector('h1')?.textContent).toContain(
+      'Welcome header'
+    );
   });
 });

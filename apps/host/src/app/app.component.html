@@ -1,1 +1,8 @@
 <knack-app-ui-nx-welcome></knack-app-ui-nx-welcome>
+<div class="container">
+  <div>I'm the host app</div>
+
+  <a [routerLink]="['/remote-app']">load the remote app</a>
+
+  <router-outlet></router-outlet> // the remote app comes here
+</div>
