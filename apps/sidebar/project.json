@@ -1,25 +1,25 @@
 {
-  "name": "header",
+  "name": "sidebar",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "projectType": "application",
-  "sourceRoot": "apps/header/src",
+  "sourceRoot": "apps/sidebar/src",
   "prefix": "knack-app-ui",
   "targets": {
     "build": {
       "executor": "@nrwl/angular:webpack-browser",
       "outputs": ["{options.outputPath}"],
       "options": {
-        "outputPath": "dist/apps/header",
-        "index": "apps/header/src/index.html",
-        "main": "apps/header/src/main.ts",
-        "polyfills": "apps/header/src/polyfills.ts",
-        "tsConfig": "apps/header/tsconfig.app.json",
+        "outputPath": "dist/apps/sidebar",
+        "index": "apps/sidebar/src/index.html",
+        "main": "apps/sidebar/src/main.ts",
+        "polyfills": "apps/sidebar/src/polyfills.ts",
+        "tsConfig": "apps/sidebar/tsconfig.app.json",
         "inlineStyleLanguage": "scss",
-        "assets": ["apps/header/src/favicon.ico", "apps/header/src/assets"],
-        "styles": ["apps/header/src/styles.scss"],
+        "assets": ["apps/sidebar/src/favicon.ico", "apps/sidebar/src/assets"],
+        "styles": ["apps/sidebar/src/styles.scss"],
         "scripts": [],
         "customWebpackConfig": {
-          "path": "apps/header/webpack.config.js"
+          "path": "apps/sidebar/webpack.config.js"
         }
       },
       "configurations": {
@@ -38,13 +38,13 @@
           ],
           "fileReplacements": [
             {
-              "replace": "apps/header/src/environments/environment.ts",
-              "with": "apps/header/src/environments/environment.prod.ts"
+              "replace": "apps/sidebar/src/environments/environment.ts",
+              "with": "apps/sidebar/src/environments/environment.prod.ts"
             }
           ],
           "outputHashing": "all",
           "customWebpackConfig": {
-            "path": "apps/header/webpack.prod.config.js"
+            "path": "apps/sidebar/webpack.prod.config.js"
           }
         },
         "development": {
@@ -62,35 +62,35 @@
       "executor": "@nrwl/angular:webpack-dev-server",
       "configurations": {
         "production": {
-          "browserTarget": "header:build:production"
+          "browserTarget": "sidebar:build:production"
         },
         "development": {
-          "browserTarget": "header:build:development"
+          "browserTarget": "sidebar:build:development"
         }
       },
       "defaultConfiguration": "development",
       "options": {
-        "port": 4202,
-        "publicHost": "http://localhost:4202"
+        "port": 4203,
+        "publicHost": "http://localhost:4203"
       }
     },
     "extract-i18n": {
       "executor": "@angular-devkit/build-angular:extract-i18n",
       "options": {
-        "browserTarget": "header:build"
+        "browserTarget": "sidebar:build"
       }
     },
     "lint": {
       "executor": "@nrwl/linter:eslint",
       "options": {
-        "lintFilePatterns": ["apps/header/**/*.ts", "apps/header/**/*.html"]
+        "lintFilePatterns": ["apps/sidebar/**/*.ts", "apps/sidebar/**/*.html"]
       }
     },
     "test": {
       "executor": "@nrwl/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
-        "jestConfig": "apps/header/jest.config.ts",
+        "jestConfig": "apps/sidebar/jest.config.ts",
         "passWithNoTests": true
       }
     },
@@ -98,14 +98,14 @@
       "executor": "@nrwl/angular:file-server",
       "defaultConfiguration": "development",
       "options": {
-        "buildTarget": "header:build"
+        "buildTarget": "sidebar:build"
       },
       "configurations": {
         "development": {
-          "buildTarget": "header:build:development"
+          "buildTarget": "sidebar:build:development"
         },
         "production": {
-          "buildTarget": "header:build:production"
+          "buildTarget": "sidebar:build:production"
         }
       }
     }

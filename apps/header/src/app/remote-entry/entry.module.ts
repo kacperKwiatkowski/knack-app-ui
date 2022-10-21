@@ -2,12 +2,16 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 
-import { RemoteEntryComponent } from './entry.component';
+import { HeaderEntryComponent } from './entry.component';
 import { remoteRoutes } from './entry.routes';
+import {AppModule} from "../app.module";
 
 @NgModule({
-  declarations: [RemoteEntryComponent],
-  imports: [CommonModule, RouterModule.forChild(remoteRoutes)],
+  declarations: [HeaderEntryComponent],
+  imports: [CommonModule, RouterModule.forChild(remoteRoutes), AppModule],
   providers: [],
+  exports: [
+    HeaderEntryComponent
+  ]
 })
-export class RemoteEntryModule {}
+export class HeaderEntryModule {}

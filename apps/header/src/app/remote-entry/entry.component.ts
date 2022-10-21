@@ -2,6 +2,6 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'knack-app-ui-header-entry',
-  template: `TEST`,
+  template: `<knack-app-ui-header-content></knack-app-ui-header-content>`,
 })
-export class RemoteEntryComponent {}
+export class HeaderEntryComponent {}
