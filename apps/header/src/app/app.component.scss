@@ -1,5 +1,20 @@
 h3{
   width: 100%;
-  border-bottom: 2px solid black;
+  height: 100px;
   z-index: 100;
+  background-color: #a55e3f;
+
+  visibility: visible;
+  text-align: center;
+  line-height: 65px;
+  letter-spacing: 10px;
+  font-weight: 250;
+  font-size: 40px;
+  border-color: rgb(88, 89, 91);
+  color: rgb(255, 255, 255);
+
+  display: flex;
+  justify-content: center;
+
+  margin: 0;
 }
