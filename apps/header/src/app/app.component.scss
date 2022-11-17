@@ -1,20 +1,80 @@
-h3{
+@import "variables";
+
+header{
   width: 100%;
-  height: 100px;
-  z-index: 100;
-  background-color: #a55e3f;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+h3{
+  height: 50px;
+  background-color: $background-colour;
 
   visibility: visible;
   text-align: center;
+
+  text-transform: uppercase;
   line-height: 65px;
-  letter-spacing: 10px;
-  font-weight: 250;
-  font-size: 40px;
-  border-color: rgb(88, 89, 91);
-  color: rgb(255, 255, 255);
+  letter-spacing: 5px;
+  font-weight: 400;
+  font-size: 30px;
+
+  color: $header-text-colour;
 
   display: flex;
   justify-content: center;
+  flex-direction: column;
 
+  margin: 0 20px;
+}
+
+ul{
+  display:inline;
   margin: 0;
+  padding: 0;
+
+  li{
+
+    display:inline-block;
+    color: $header-text-colour;
+    margin: 0;
+
+    a{
+
+      padding: 0 30px;
+      height: 50px;
+      color: $header-text-colour;
+      text-decoration: none;
+      transition: 0.3s ease-in;
+
+      &:hover{
+        text-decoration: underline;
+        transition: 0.3s ease-in;
+      }
+    }
+  }
+}
+
+#header-bottom-decorator{
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 6px;
+  top: 50px;
+  left: 0;
+  background-color: $background-colour;
+  -webkit-transition: none;
+  -o-transition: none;
+  transition: none;
+}
+//
+//#zigzag{
+//
+//  stroke: #ddc0ad;
+//}
+
+svg{
+
+  stroke: #ddc0ad;
 }
