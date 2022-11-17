@@ -1,0 +1,114 @@
+{
+  "name": "footer",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "sourceRoot": "apps/footer/src",
+  "prefix": "knack-app-ui",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/angular:webpack-browser",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/apps/footer",
+        "index": "apps/footer/src/index.html",
+        "main": "apps/footer/src/main.ts",
+        "polyfills": "apps/footer/src/polyfills.ts",
+        "tsConfig": "apps/footer/tsconfig.app.json",
+        "inlineStyleLanguage": "scss",
+        "assets": ["apps/footer/src/favicon.ico", "apps/footer/src/assets"],
+        "styles": ["apps/footer/src/styles.scss"],
+        "scripts": [],
+        "customWebpackConfig": {
+          "path": "apps/footer/webpack.config.js"
+        }
+      },
+      "configurations": {
+        "production": {
+          "budgets": [
+            {
+              "type": "initial",
+              "maximumWarning": "500kb",
+              "maximumError": "1mb"
+            },
+            {
+              "type": "anyComponentStyle",
+              "maximumWarning": "2kb",
+              "maximumError": "4kb"
+            }
+          ],
+          "fileReplacements": [
+            {
+              "replace": "apps/footer/src/environments/environment.ts",
+              "with": "apps/footer/src/environments/environment.prod.ts"
+            }
+          ],
+          "outputHashing": "all",
+          "customWebpackConfig": {
+            "path": "apps/footer/webpack.prod.config.js"
+          }
+        },
+        "development": {
+          "buildOptimizer": false,
+          "optimization": false,
+          "vendorChunk": true,
+          "extractLicenses": false,
+          "sourceMap": true,
+          "namedChunks": true
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "serve": {
+      "executor": "@nrwl/angular:webpack-dev-server",
+      "configurations": {
+        "production": {
+          "browserTarget": "footer:build:production"
+        },
+        "development": {
+          "browserTarget": "footer:build:development"
+        }
+      },
+      "defaultConfiguration": "development",
+      "options": {
+        "port": 4204,
+        "publicHost": "http://localhost:4204"
+      }
+    },
+    "extract-i18n": {
+      "executor": "@angular-devkit/build-angular:extract-i18n",
+      "options": {
+        "browserTarget": "footer:build"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": ["apps/footer/**/*.ts", "apps/footer/**/*.html"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "apps/footer/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "serve-static": {
+      "executor": "@nrwl/angular:file-server",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "footer:build"
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "footer:build:development"
+        },
+        "production": {
+          "buildTarget": "footer:build:production"
+        }
+      }
+    }
+  },
+  "tags": []
+}
