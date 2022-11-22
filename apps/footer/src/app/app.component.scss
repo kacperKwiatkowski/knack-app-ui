@@ -1,3 +1,5 @@
+@import "variables";
+
 footer{
   background-color: #fcf9f7;
   height: 600px;
@@ -17,12 +19,27 @@ footer{
   font-weight: 450;
   letter-spacing: 0.1rem;
   color: rgb(166, 94, 63);
-  padding-bottom: 10px;
+  padding-bottom: 30px;
+  text-transform: uppercase;
 }
 
 .footer-column-link{
   font-size: medium;
   font-weight: 100;
   color: black;
-  padding-bottom: 5px;
+  margin-bottom: 15px;
+
+  background-image: linear-gradient($underline-blue, $underline-blue);
+  background-size: 0 0.1em;
+  background-position-y: 100%;
+  background-position-x: 0;
+  background-repeat: no-repeat;
+  transition: background-size 0.2s ease-in-out;
+
+  &:hover,
+  &:focus,
+  &:active{
+    background-size: 100% 0.1em;
+  }
 }
+
