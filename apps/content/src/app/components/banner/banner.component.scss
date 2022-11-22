@@ -3,7 +3,8 @@
 img{
   width: 100%;
   height: 600px;
-  object-fit: fill; object-position: 100% 0%;
+  object-fit: none; object-position: 100% 80%;
+  display: block;
 }
 
 #banner-wrapper{
@@ -20,7 +21,7 @@ img{
   min-width: 500px;
   text-align: center;
   position: relative;
-  top: 30%;
+  top: 20%;
   transform: translate(-6%, -20%);
   color: $banner-text-colour;
   font-size: 60px;
@@ -31,7 +32,7 @@ img{
   min-width: 500px;
   text-align: center;
   position: relative;
-  top: 30%;
+  top: 20%;
   transform: translate(-6%, -20%);
   color: $banner-text-colour;
   font-size: x-large;
@@ -62,12 +63,6 @@ img{
         display: block;
         content: '';
 
-        //background-image: linear-gradient(
-        //    90deg,
-        //    rgba(0, 0, 0, 1) 0%,
-        //    rgba(0, 0, 0, 1) 11%,
-        //    rgba(255, 255, 255, 0) 100%
-        //);
       }
       &-image {
         height: 100%;
