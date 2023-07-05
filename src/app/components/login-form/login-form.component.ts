@@ -8,7 +8,16 @@ import {NgForm} from "@angular/forms";
 })
 export class LoginFormComponent {
 
-  login(loginForm: NgForm) {
-    console.log(loginForm.value, loginForm.valid)
+  val = {
+    email: "example@gmail.com",
+    password: "1234!"
+  }
+
+  login(loginForm: NgForm, submit: SubmitEvent) {
+    console.log(loginForm.value, loginForm.valid, submit)
+  }
+
+  OnEmailChange(change: any) {
+    console.log(change)
   }
 }
