@@ -1,0 +1,24 @@
+<!--<img src="https://images.pexels.com/photos/1303081/pexels-photo-1303081.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="">-->
+
+<div class="slider">
+  <ng-container *ngFor="let image of images; let i = index">
+    <div class="slide" *ngIf="i === currentSlideIndex" @fade>
+      <div class="slide-bg">
+        <img
+          class="slide-bg-image"
+          [src]="image"
+          [alt]=""
+        />
+      </div>
+      <div id="banner-wrapper">
+        <div id="banner-title">
+          UNIQUE CRAFTS
+        </div>
+        <div id="banner-message">
+          Find a unique christmas present.
+        </div>
+      </div>
+
+    </div>
+  </ng-container>
+</div>

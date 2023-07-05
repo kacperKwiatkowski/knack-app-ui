@@ -1,0 +1,80 @@
+@import "/variables";
+
+header{
+  width: 100%;
+  min-width: 800px;
+  z-index: 1000;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+h3{
+  height: 50px;
+  background-color: $background-colour;
+
+  visibility: visible;
+  text-align: center;
+
+  text-transform: uppercase;
+  line-height: 65px;
+  letter-spacing: 5px;
+  font-weight: 400;
+  font-size: 30px;
+
+  color: $header-text-colour;
+
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+  margin: 0 20px;
+}
+
+ul{
+  display:inline;
+  margin: 0;
+  padding: 0;
+
+  li{
+
+    display:inline-block;
+    color: $header-text-colour;
+    margin: 0;
+
+    a{
+
+      margin: 0 30px;
+      height: 50px;
+      color: $header-text-colour;
+      text-decoration: none;
+
+      background-image: linear-gradient($underline-blue, $underline-blue);
+      background-size: 0% 0.1em;
+      background-position-y: 100%;
+      background-position-x: 0%;
+      background-repeat: no-repeat;
+      transition: background-size 0.2s ease-in-out;
+
+      &:hover,
+      &:focus,
+      &:active{
+        background-size: 100% 0.1em;
+      }
+    }
+  }
+}
+
+#header-bottom-decorator{
+  z-index: 1000;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 6px;
+  top: 50px;
+  left: 0;
+  background-color: $background-colour;
+  -webkit-transition: none;
+  -o-transition: none;
+  transition: none;
+}
