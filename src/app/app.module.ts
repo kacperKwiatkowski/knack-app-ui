@@ -16,6 +16,8 @@ import {MatButtonModule} from "@angular/material/button";
 import {FormsModule} from "@angular/forms";
 import {PasswordStrengthDirective} from "./directives/password-strength.directive";
 import {Only0neErrorPipe} from "./pipes/only-one-error.pipe";
+import { RegisterFormComponent } from './components/register-form/register-form.component';
+import { LoginFormComponent } from './components/login-form/login-form.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +28,8 @@ import {Only0neErrorPipe} from "./pipes/only-one-error.pipe";
     FooterComponent,
     PasswordStrengthDirective,
     Only0neErrorPipe,
+    RegisterFormComponent,
+    LoginFormComponent,
   ],
   imports: [
     BrowserModule,
