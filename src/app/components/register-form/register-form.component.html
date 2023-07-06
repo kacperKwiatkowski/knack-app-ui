@@ -1,7 +1,28 @@
 <mat-card class="register-page">
   <mat-card-title>Register</mat-card-title>
   <mat-card-content>
-    <form class="register-form">
+    <form
+      class="register-form"
+      [formGroup]="registerForm"
+    >
+
+      <mat-form-field>
+        <mat-label>Login</mat-label>
+        <input matInput type="text" formControlName="login" #login>
+
+        <mat-error *ngIf="registrationLogin.errors?.['loginExists']"></mat-error>
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>First Name</mat-label>
+        <input matInput type="text" name="firstName">
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Last Name</mat-label>
+        <input matInput type="text" name="lastName">
+      </mat-form-field>
+
 
       <mat-form-field>
         <mat-label>Email</mat-label>
@@ -9,8 +30,27 @@
       </mat-form-field>
 
       <mat-form-field>
+        <mat-label>Phone Number</mat-label>
+        <input matInput type="text" name="phoneNumber">
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Date of Birth</mat-label>
+        <input matInput name="dateOfBirth"
+               [matDatepicker]="dateOfBirthDatePicker"
+               formControlName="dateOfBirth">
+        <mat-datepicker-toggle matSuffix [for]="dateOfBirthDatePicker"></mat-datepicker-toggle>
+        <mat-datepicker #dateOfBirthDatePicker></mat-datepicker>
+      </mat-form-field>
+
+      <mat-form-field>
         <mat-label>Password</mat-label>
         <input matInput type="password" name="password">
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Confirm Password</mat-label>
+        <input matInput type="password" name="confirmPassword">
       </mat-form-field>
 
       <button mat-raised-button
