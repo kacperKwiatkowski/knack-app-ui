@@ -8,7 +8,6 @@ import {HeaderComponent} from './components/header/header.component';
 import {BannerComponent} from "./components/banner/banner.component";
 import {CategorySelectorComponent} from "./components/category-selector/category-selector.component";
 import {FooterComponent} from './components/footer/footer.component';
-import {LoginFormComponent} from "./components/login-form/login-form.component";
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatCardModule} from "@angular/material/card";
@@ -17,7 +16,6 @@ import {MatButtonModule} from "@angular/material/button";
 import {FormsModule} from "@angular/forms";
 import {PasswordStrengthDirective} from "./directives/password-strength.directive";
 import {Only0neErrorPipe} from "./pipes/only-one-error.pipe";
-import { RegisterFormComponent } from './components/register-form/register-form.component';
 
 @NgModule({
   declarations: [
@@ -26,10 +24,8 @@ import { RegisterFormComponent } from './components/register-form/register-form.
     BannerComponent,
     CategorySelectorComponent,
     FooterComponent,
-    LoginFormComponent,
     PasswordStrengthDirective,
     Only0neErrorPipe,
-    RegisterFormComponent
   ],
   imports: [
     BrowserModule,
