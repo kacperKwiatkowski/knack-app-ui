@@ -21,6 +21,7 @@ import {MatNativeDateModule} from "@angular/material/core";
 import { HomeSiteComponent } from './sites/home-site/home-site.component';
 import { LoginSiteComponent } from './sites/login-site/login-site.component';
 import { RegistrationSiteComponent } from './sites/registration-site/registration-site.component';
+import { PageNotFoundSiteComponent } from './sites/page-not-found-site/page-not-found-site.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,6 +36,7 @@ import { RegistrationSiteComponent } from './sites/registration-site/registratio
     HomeSiteComponent,
     LoginSiteComponent,
     RegistrationSiteComponent,
+    PageNotFoundSiteComponent,
   ],
   imports: [
     BrowserModule,
