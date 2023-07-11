@@ -1,6 +1,10 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { HomeSiteComponent } from './home-site.component';
+import {BannerComponent} from "../../components/banner/banner.component";
+import {CategorySelectorComponent} from "../../components/category-selector/category-selector.component";
+import {MatCardModule} from "@angular/material/card";
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 
 describe('HomeSiteComponent', () => {
   let component: HomeSiteComponent;
@@ -8,7 +12,8 @@ describe('HomeSiteComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [HomeSiteComponent]
+      declarations: [HomeSiteComponent, BannerComponent, CategorySelectorComponent],
+      imports: [MatCardModule, BrowserAnimationsModule]
     });
     fixture = TestBed.createComponent(HomeSiteComponent);
     component = fixture.componentInstance;
