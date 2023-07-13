@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { RegistrationSiteComponent } from './registration-site.component';
+import { RegistrationPageComponent } from './registration-page.component';
 import {RegisterFormComponent} from "../../components/register-form/register-form.component";
 import {MatCardModule} from "@angular/material/card";
 import {BrowserAnimationsModule, NoopAnimationsModule} from "@angular/platform-browser/animations";
@@ -11,17 +11,24 @@ import {MatDatepickerModule} from "@angular/material/datepicker";
 import {MatNativeDateModule} from "@angular/material/core";
 import {MatInputModule} from "@angular/material/input";
 import {SharedModule} from "../../../shared/shared.module";
+import {BrowserModule} from "@angular/platform-browser";
+import {HttpClientModule} from "@angular/common/http";
+import {AppRoutingModule} from "../../../app-routing.module";
 
-describe('RegistrationSiteComponent', () => {
-  let component: RegistrationSiteComponent;
-  let fixture: ComponentFixture<RegistrationSiteComponent>;
+describe('RegistrationPageComponent', () => {
+  let component: RegistrationPageComponent;
+  let fixture: ComponentFixture<RegistrationPageComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [RegistrationSiteComponent, RegisterFormComponent],
-      imports: [SharedModule]
+      declarations: [RegistrationPageComponent, RegisterFormComponent],
+      imports: [SharedModule,
+        BrowserModule,
+        BrowserAnimationsModule,
+        HttpClientModule,
+        AppRoutingModule]
     }).compileComponents();
-    fixture = TestBed.createComponent(RegistrationSiteComponent);
+    fixture = TestBed.createComponent(RegistrationPageComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -1,7 +1,7 @@
 import {NgModule} from "@angular/core";
 import {RouterModule, Routes} from "@angular/router";
-import {HomeSiteComponent} from "./pages/home-site/home-site.component";
-import {LoginSiteComponent} from "./pages/login-site/login-site.component";
+import {HomePageComponent} from "./pages/./home-page/home-page.component";
+import {LoginPageComponent} from "./pages/login-site/login-page.component";
 import {RegisterFormComponent} from "./components/register-form/register-form.component";
 
 const routes: Routes = [
@@ -11,10 +11,10 @@ const routes: Routes = [
     pathMatch: "full"
   }, {
     path: "home",
-    component: HomeSiteComponent
+    component: HomePageComponent
   }, {
     path: "login",
-    component: LoginSiteComponent
+    component: LoginPageComponent
   }, {
     path: "register",
     component: RegisterFormComponent

@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
-import {BasketSiteComponent} from "./basket-site/basket-site.component";
+import {BasketPageComponent} from "./basket-page/basket-page.component";
 import {BasketRoutingModule} from "./basket-routing.module";
 import {SharedModule} from "../shared/shared.module";
 
 @NgModule({
   declarations: [
-    BasketSiteComponent
+    BasketPageComponent
   ],
   imports: [
     SharedModule,

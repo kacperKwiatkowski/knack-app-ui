@@ -1,22 +1,23 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { HomeSiteComponent } from './home-site.component';
+import { HomePageComponent } from './home-page.component';
 import {BannerComponent} from "../../components/banner/banner.component";
 import {CategorySelectorComponent} from "../../components/category-selector/category-selector.component";
 import {MatCardModule} from "@angular/material/card";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {SharedModule} from "../../../shared/shared.module";
 
-describe('HomeSiteComponent', () => {
-  let component: HomeSiteComponent;
-  let fixture: ComponentFixture<HomeSiteComponent>;
+describe('HomePageComponent', () => {
+  let component: HomePageComponent;
+  let fixture: ComponentFixture<HomePageComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [HomeSiteComponent, BannerComponent, CategorySelectorComponent],
-      imports: [SharedModule]
+      declarations: [HomePageComponent, BannerComponent, CategorySelectorComponent],
+      imports: [SharedModule, BrowserAnimationsModule,
+      ]
     });
-    fixture = TestBed.createComponent(HomeSiteComponent);
+    fixture = TestBed.createComponent(HomePageComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -9,9 +9,9 @@ import {PasswordStrengthDirective} from "./directives/password-strength.directiv
 import {Only0neErrorPipe} from "./pipes/only-one-error.pipe";
 import {RegisterFormComponent} from "./components/register-form/register-form.component";
 import {LoginFormComponent} from "./components/login-form/login-form.component";
-import {HomeSiteComponent} from "./pages/home-site/home-site.component";
-import {LoginSiteComponent} from "./pages/login-site/login-site.component";
-import {RegistrationSiteComponent} from "./pages/registration-site/registration-site.component";
+import {HomePageComponent} from "./pages/./home-page/home-page.component";
+import {LoginPageComponent} from "./pages/login-site/login-page.component";
+import {RegistrationPageComponent} from "./pages/registration-site/registration-page.component";
 import {PageNotFoundSiteComponent} from "../shared/pages/page-not-found-site/page-not-found-site.component";
 import {HomeRoutingModule} from "./home-routing.module";
 
@@ -23,9 +23,9 @@ import {HomeRoutingModule} from "./home-routing.module";
     Only0neErrorPipe,
     RegisterFormComponent,
     LoginFormComponent,
-    HomeSiteComponent,
-    LoginSiteComponent,
-    RegistrationSiteComponent,
+    HomePageComponent,
+    LoginPageComponent,
+    RegistrationPageComponent,
     PageNotFoundSiteComponent,
   ],
   imports: [
