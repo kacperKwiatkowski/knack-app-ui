@@ -9,7 +9,7 @@ import {SharedModule} from "../shared/shared.module";
   ],
   imports: [
     SharedModule,
-    BasketRoutingModule,
+    BasketRoutingModule
   ]
 })
 export class BasketModule { }

@@ -23,7 +23,7 @@ import {FooterComponent} from "./layout/footer/footer.component";
     BrowserModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
   ]
 })
 export class CoreModule { }
