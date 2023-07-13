@@ -5,6 +5,7 @@ import {BannerComponent} from "../../components/banner/banner.component";
 import {CategorySelectorComponent} from "../../components/category-selector/category-selector.component";
 import {MatCardModule} from "@angular/material/card";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import {SharedModule} from "../../../shared/shared.module";
 
 describe('HomeSiteComponent', () => {
   let component: HomeSiteComponent;
@@ -13,7 +14,7 @@ describe('HomeSiteComponent', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       declarations: [HomeSiteComponent, BannerComponent, CategorySelectorComponent],
-      imports: [MatCardModule, BrowserAnimationsModule]
+      imports: [SharedModule]
     });
     fixture = TestBed.createComponent(HomeSiteComponent);
     component = fixture.componentInstance;

@@ -1,27 +1,18 @@
 import {NgModule} from '@angular/core';
-import {BrowserModule} from '@angular/platform-browser';
-import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from "./app.component";
-import {HeaderComponent} from "./components/header/header.component";
-import {BannerComponent} from "./components/banner/banner.component";
-import {CategorySelectorComponent} from "./components/category-selector/category-selector.component";
-import {FooterComponent} from "./components/footer/footer.component";
-import {PasswordStrengthDirective} from "./directives/password-strength.directive";
-import {Only0neErrorPipe} from "./pipes/only-one-error.pipe";
-import {RegisterFormComponent} from "./components/register-form/register-form.component";
-import {LoginFormComponent} from "./components/login-form/login-form.component";
-import {HomeSiteComponent} from "./sites/home-site/home-site.component";
-import {LoginSiteComponent} from "./sites/login-site/login-site.component";
-import {RegistrationSiteComponent} from "./sites/registration-site/registration-site.component";
-import {PageNotFoundSiteComponent} from "./sites/page-not-found-site/page-not-found-site.component";
-import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
-import {MatCardModule} from "@angular/material/card";
-import {MatInputModule} from "@angular/material/input";
-import {MatButtonModule} from "@angular/material/button";
-import {FormsModule, ReactiveFormsModule} from "@angular/forms";
-import {HttpClientModule} from "@angular/common/http";
-import {MatDatepickerModule} from "@angular/material/datepicker";
-import {MatNativeDateModule} from "@angular/material/core";
+import {HeaderComponent} from "./shared/layout/header/header.component";
+import {BannerComponent} from "./home/components/banner/banner.component";
+import {CategorySelectorComponent} from "./home/components/category-selector/category-selector.component";
+import {FooterComponent} from "./shared/layout/footer/footer.component";
+import {PasswordStrengthDirective} from "./home/directives/password-strength.directive";
+import {Only0neErrorPipe} from "./home/pipes/only-one-error.pipe";
+import {RegisterFormComponent} from "./home/components/register-form/register-form.component";
+import {LoginFormComponent} from "./home/components/login-form/login-form.component";
+import {HomeSiteComponent} from "./home/pages/home-site/home-site.component";
+import {LoginSiteComponent} from "./home/pages/login-site/login-site.component";
+import {RegistrationSiteComponent} from "./home/pages/registration-site/registration-site.component";
+import {PageNotFoundSiteComponent} from "./shared/pages/page-not-found-site/page-not-found-site.component";
+import {SharedModule} from "./shared/shared.module";
 
 @NgModule({
   declarations: [
@@ -40,20 +31,7 @@ import {MatNativeDateModule} from "@angular/material/core";
     PageNotFoundSiteComponent,
   ],
   imports: [
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    MatCardModule,
-    MatInputModule,
-    MatButtonModule,
-    FormsModule,
-    ReactiveFormsModule,
-    HttpClientModule,
-    MatDatepickerModule,
-    MatNativeDateModule
-  ],
-  providers: [
-    MatDatepickerModule
+    SharedModule
   ],
   bootstrap: [AppComponent]
 })

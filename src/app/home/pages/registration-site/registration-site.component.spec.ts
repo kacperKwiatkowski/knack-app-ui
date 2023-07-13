@@ -10,6 +10,7 @@ import {MatFormFieldControl, MatFormFieldModule} from "@angular/material/form-fi
 import {MatDatepickerModule} from "@angular/material/datepicker";
 import {MatNativeDateModule} from "@angular/material/core";
 import {MatInputModule} from "@angular/material/input";
+import {SharedModule} from "../../../shared/shared.module";
 
 describe('RegistrationSiteComponent', () => {
   let component: RegistrationSiteComponent;
@@ -18,9 +19,7 @@ describe('RegistrationSiteComponent', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       declarations: [RegistrationSiteComponent, RegisterFormComponent],
-      imports: [MatCardModule, MatFormFieldModule,
-        MatInputModule, MatDatepickerModule,NoopAnimationsModule,
-        MatNativeDateModule, FormsModule, ReactiveFormsModule, HttpClientTestingModule ]
+      imports: [SharedModule]
     }).compileComponents();
     fixture = TestBed.createComponent(RegistrationSiteComponent);
     component = fixture.componentInstance;
