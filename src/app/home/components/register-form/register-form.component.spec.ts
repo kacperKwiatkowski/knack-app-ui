@@ -13,7 +13,8 @@ import {SharedModule} from "../../../shared/shared.module";
 import {BrowserModule} from "@angular/platform-browser";
 import {HttpClientModule} from "@angular/common/http";
 import {AppRoutingModule} from "../../../app-routing.module";
-import {UserService} from "../../services/user.service";
+import {UserService} from "../../../core/services/user.service";
+import {CoreModule} from "../../../core/core.module";
 
 describe('RegisterFormComponent', () => {
   let component: RegisterFormComponent;
@@ -22,12 +23,8 @@ describe('RegisterFormComponent', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       declarations: [RegisterFormComponent],
-      imports: [SharedModule,     BrowserModule,
-        HttpClientModule,
-        BrowserAnimationsModule,
-        AppRoutingModule,
-        HttpClientTestingModule
-      ], providers: [UserService]
+      imports: [SharedModule, CoreModule],
+      providers: [UserService]
     }).compileComponents();
     fixture = TestBed.createComponent(RegisterFormComponent);
     component = fixture.componentInstance;

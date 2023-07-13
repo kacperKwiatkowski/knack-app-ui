@@ -10,8 +10,9 @@ import {BrowserAnimationsModule, NoopAnimationsModule} from "@angular/platform-b
 import {MatNativeDateModule} from "@angular/material/core";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {HttpClientTestingModule} from "@angular/common/http/testing";
-import {Only0neErrorPipe} from "../../pipes/only-one-error.pipe";
+import {Only0neErrorPipe} from "../../../shared/pipes/only-one-error.pipe";
 import {SharedModule} from "../../../shared/shared.module";
+import {CoreModule} from "../../../core/core.module";
 
 describe('LoginPageComponent', () => {
   let component: LoginPageComponent;
@@ -20,7 +21,7 @@ describe('LoginPageComponent', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       declarations: [Only0neErrorPipe, LoginPageComponent, LoginFormComponent],
-      imports: [SharedModule, BrowserAnimationsModule,]
+      imports: [SharedModule, CoreModule]
     }).compileComponents();
     fixture = TestBed.createComponent(LoginPageComponent);
     component = fixture.componentInstance;

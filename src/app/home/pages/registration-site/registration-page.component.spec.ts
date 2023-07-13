@@ -14,6 +14,7 @@ import {SharedModule} from "../../../shared/shared.module";
 import {BrowserModule} from "@angular/platform-browser";
 import {HttpClientModule} from "@angular/common/http";
 import {AppRoutingModule} from "../../../app-routing.module";
+import {CoreModule} from "../../../core/core.module";
 
 describe('RegistrationPageComponent', () => {
   let component: RegistrationPageComponent;
@@ -22,11 +23,7 @@ describe('RegistrationPageComponent', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       declarations: [RegistrationPageComponent, RegisterFormComponent],
-      imports: [SharedModule,
-        BrowserModule,
-        BrowserAnimationsModule,
-        HttpClientModule,
-        AppRoutingModule]
+      imports: [SharedModule, CoreModule]
     }).compileComponents();
     fixture = TestBed.createComponent(RegistrationPageComponent);
     component = fixture.componentInstance;

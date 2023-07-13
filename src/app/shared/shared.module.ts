@@ -7,12 +7,9 @@ import {MatDatepickerModule} from "@angular/material/datepicker";
 import {MatNativeDateModule} from "@angular/material/core";
 import {RouterLink, RouterOutlet} from "@angular/router";
 import {CommonModule} from "@angular/common";
-import {HeaderComponent} from "./layout/header/header.component";
-import {FooterComponent} from "./layout/footer/footer.component";
-
 
 @NgModule({
-  declarations: [HeaderComponent, FooterComponent],
+  declarations: [],
   imports: [
     CommonModule,
     MatCardModule,
@@ -35,9 +32,7 @@ import {FooterComponent} from "./layout/footer/footer.component";
     MatDatepickerModule,
     MatNativeDateModule,
     RouterOutlet,
-    RouterLink,
-    FooterComponent,
-    HeaderComponent
+    RouterLink
   ],
   providers: [
     MatDatepickerModule

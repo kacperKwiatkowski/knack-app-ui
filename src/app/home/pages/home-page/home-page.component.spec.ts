@@ -6,6 +6,7 @@ import {CategorySelectorComponent} from "../../components/category-selector/cate
 import {MatCardModule} from "@angular/material/card";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {SharedModule} from "../../../shared/shared.module";
+import {CoreModule} from "../../../core/core.module";
 
 describe('HomePageComponent', () => {
   let component: HomePageComponent;
@@ -14,8 +15,7 @@ describe('HomePageComponent', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       declarations: [HomePageComponent, BannerComponent, CategorySelectorComponent],
-      imports: [SharedModule, BrowserAnimationsModule,
-      ]
+      imports: [SharedModule, CoreModule]
     });
     fixture = TestBed.createComponent(HomePageComponent);
     component = fixture.componentInstance;

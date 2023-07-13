@@ -1,7 +1,7 @@
 import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
 import {PageNotFoundSiteComponent} from "./shared/pages/page-not-found-site/page-not-found-site.component";
-import {CustomPreloadingStrategy} from "./home/services/custom-preloading.strategy";
+import {CustomPreloadingStrategy} from "./core/services/custom-preloading.strategy";
 
 const routes: Routes = [
   {
