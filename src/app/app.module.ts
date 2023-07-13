@@ -13,6 +13,10 @@ import {LoginSiteComponent} from "./home/pages/login-site/login-site.component";
 import {RegistrationSiteComponent} from "./home/pages/registration-site/registration-site.component";
 import {PageNotFoundSiteComponent} from "./shared/pages/page-not-found-site/page-not-found-site.component";
 import {SharedModule} from "./shared/shared.module";
+import {HttpClientModule} from "@angular/common/http";
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import {BrowserModule} from "@angular/platform-browser";
+import {AppRoutingModule} from "./app-routing.module";
 
 @NgModule({
   declarations: [
@@ -31,7 +35,8 @@ import {SharedModule} from "./shared/shared.module";
     PageNotFoundSiteComponent,
   ],
   imports: [
-    SharedModule
+    SharedModule,
+    BrowserModule, BrowserAnimationsModule, HttpClientModule, AppRoutingModule
   ],
   bootstrap: [AppComponent]
 })
