@@ -5,27 +5,40 @@ import {MatButtonModule} from "@angular/material/button";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {MatDatepickerModule} from "@angular/material/datepicker";
 import {MatNativeDateModule} from "@angular/material/core";
+import {RouterLink, RouterOutlet} from "@angular/router";
+import {CommonModule} from "@angular/common";
+import {HeaderComponent} from "./layout/header/header.component";
+import {FooterComponent} from "./layout/footer/footer.component";
 
 
 @NgModule({
-  declarations: [],
+  declarations: [HeaderComponent, FooterComponent],
   imports: [
+    CommonModule,
     MatCardModule,
     MatInputModule,
     MatButtonModule,
     FormsModule,
     ReactiveFormsModule,
     MatDatepickerModule,
-    MatNativeDateModule
+    MatNativeDateModule,
+    RouterOutlet,
+    RouterLink
   ],
   exports: [
+    CommonModule,
     MatCardModule,
     MatInputModule,
     MatButtonModule,
     FormsModule,
     ReactiveFormsModule,
     MatDatepickerModule,
-    MatNativeDateModule],
+    MatNativeDateModule,
+    RouterOutlet,
+    RouterLink,
+    FooterComponent,
+    HeaderComponent
+  ],
   providers: [
     MatDatepickerModule
   ]
