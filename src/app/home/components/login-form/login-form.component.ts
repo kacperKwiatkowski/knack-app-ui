@@ -1,23 +1,53 @@
-import { Component } from '@angular/core';
-import {NgForm} from "@angular/forms";
+import {Component, OnInit} from '@angular/core';
+import {FormBuilder, FormControl, FormGroup, NgForm, Validators} from "@angular/forms";
+import {AuthService} from "../../../core/services/auth.service";
+import {UserLoginDTO} from "../../../core/models/UserLoginDTO";
 
 @Component({
   selector: 'app-login-form',
   templateUrl: './login-form.component.html',
-  styleUrls: ['./login-form.component.scss']
+  styleUrls: ['./login-form.component.scss'],
+  providers: [AuthService]
 })
-export class LoginFormComponent {
+export class LoginFormComponent implements OnInit{
 
-  val = {
-    email: "example@gmail.com",
-    password: "1234!"
+  loginForm: FormGroup = this.fb.group({
+    username: new FormControl('', {validators: [Validators.required]}),
+    password: new FormControl('', {validators: [Validators.required, Validators.minLength(8)]}),
+  });
+
+  constructor(
+    private fb: FormBuilder,
+    private authService: AuthService) {
   }
 
-  login(loginForm: NgForm, submit: SubmitEvent) {
-    console.log(loginForm.value, loginForm.valid, submit)
+  ngOnInit(): void {
+    this.loginForm.valueChanges.subscribe(val => {
+      const confirmPassword = this.loginForm.controls["email"];
+      const password = this.loginForm.controls["password"];
+
+    })
   }
 
-  OnEmailChange(change: any) {
-    console.log(change)
+  loginFormSubmit(){
+    console.log(this.loginForm.value)
+
+    if(this.loginForm.valid){
+      console.log("Form is valid")
+      const formValue = this.loginForm.value;
+
+      const userToLogin: UserLoginDTO = {
+        username: formValue.username,
+        password: formValue.password
+      }
+
+      this.authService.loginUser(userToLogin).subscribe(
+        data => {
+          console.log(data)
+          localStorage.setItem('AuthToken', data.jwt!)
+        }
+      )
+    }
   }
+
 }
